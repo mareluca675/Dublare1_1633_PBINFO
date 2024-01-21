@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void dublare1(int &n)
+{
+    int p, nrcif = 0;
+    int copien = n;
+    
+    while(n > 10)
+    {
+        nrcif ++;
+        n = n / 10;
+    }
+    
+    p = n % 10;
+    n = copien;
+    
+    p = p * pow(10, nrcif + 1);
+    p = p + n;
+    
+    n = p;
+}
